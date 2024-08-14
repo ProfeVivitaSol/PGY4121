@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>MyApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list lines="none">
+      <ion-item *ngFor="let c of componentes"
+        [routerLink]="c.redirecTo"
+        detail=true>
+        <ion-icon slot="start" [name]="c.icon" slot="start" color="dark"></ion-icon>
+        <ion-label id="etiqueta">{{c.name}}</ion-label>
+      </ion-item>
+  </ion-list>
+  <hr class="custom-hr">
+  
+
+
+  <br><br>
+   <ion-button [routerLink]="['/alert']" shape="round">
+    Alert
+   </ion-button>
+
+   <ion-button [routerLink]="['/card']" shape="round">
+    Card
+   </ion-button>
+</ion-content>
